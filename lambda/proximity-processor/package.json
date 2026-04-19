@@ -1,0 +1,22 @@
+{
+  "name": "nudge-lambda-proximity",
+  "version": "1.0.0",
+  "description": "Nudge — Lambda consumer for proximity match AI processing",
+  "type": "module",
+  "main": "src/handler.js",
+  "scripts": {
+    "test:local": "node src/local-test.js",
+    "bundle": "esbuild src/handler.js --bundle --platform=node --target=node20 --outdir=dist --format=esm --external:@aws-sdk"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "pg": "^8.13.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.0",
+    "esbuild": "^0.24.0"
+  }
+}
